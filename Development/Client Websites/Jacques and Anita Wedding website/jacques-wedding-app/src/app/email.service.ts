@@ -12,7 +12,6 @@ export class EmailService {
   constructor(private http: HttpClient) { }
 
   public sendEmail(sendEmailModel: SendEmailModel): Observable<Response> {
-    console.log(sendEmailModel);
-    return this.http.post<Response>(`${environment.baseUrl}/ikhweziSendEmail/sendemail`, sendEmailModel);
+    return this.http.post<Response>(`${environment.baseUrl}/smithwedding/sendemail`, sendEmailModel);
   }
 }
