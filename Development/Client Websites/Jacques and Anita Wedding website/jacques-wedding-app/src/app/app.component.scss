@@ -1,0 +1,167 @@
+
+.main-section {
+
+}
+
+.details-section {
+  background-color: floralwhite;
+
+  background: url('../assets/images/Main page block 2.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+  height: 100vh;
+
+
+  .top-right-image {
+    img {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+
+  .top-left-image {
+    img {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+}
+
+.venue-section {
+  .venue-col-1 {
+    height: 300px;
+    background-color: rgb(71, 109, 85);
+
+    .row {
+      justify-content: space-around;
+    }
+
+    .venue-main-heading {
+      font-family: 'Sacramento', cursive;
+      color: floralwhite;
+      font-size: 40px;
+      border-bottom: 2px solid;
+    }
+
+    .venue-main-body {
+      margin: 20px 40px;
+      font-family: 'Nanum Pen Script', cursive;
+      color: floralwhite;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .directions-button {
+      background: floralwhite;
+      border-radius: 25px;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border: 2px solid rgb(71, 109, 85);
+    }
+  }
+
+  .venue-col-2 {
+    height: 300px;
+    background: url('../assets/images/Goedgeleven-2.jpg') no-repeat center center;
+    background-size: 100%;
+    background-color: rgb(71, 109, 85);
+  }
+}
+
+.rsvp-section {
+  margin-top: 60px;
+  height: 100vh;
+
+  .row {
+    justify-content: space-around;
+  }
+  .rsvp-main-heading {
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+    border-bottom: 2px solid;
+  }
+
+  .rsvp-body {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    input {
+      width: 300px;
+      font-weight: bold;
+      border: 2px solid rgb(71, 109, 85);
+      border-radius: 25px;
+      padding: 10px;
+      text-transform: uppercase;
+    }
+
+    textarea {
+      width: 300px;
+      font-weight: bold;
+      border: 2px solid rgb(71, 109, 85);
+      border-radius: 25px;
+      padding: 10px;
+      text-transform: uppercase;
+      height: 100px;
+    }
+
+    .sien-ons-jou-daar {
+      color: rgb(71, 109, 85);
+      font-size: 20px;
+
+    }
+
+    .rsvp-button {
+      button {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgb(71, 109, 85);
+        border-radius: 25px;
+        background: white;
+        font-weight: bolder;
+
+
+        &:active {
+          color: white;
+          background: rgb(71, 109, 85);
+        }
+      }
+
+    }
+
+    .rsvp-send-button{
+      button {
+        cursor: pointer;
+        width: 250px;
+        height: 50px;
+        border: 2px solid rgb(71, 109, 85);;
+        border-radius: 25px;
+        background: white;
+        font-weight: bolder;
+        color: rgb(71, 109, 85);
+
+        &:active {
+          color: white;
+          background: rgb(71, 109, 85);
+        }
+    }
+      }
+
+  }
+}
+
+
+
+.button-active{
+  color: white;
+  background: rgb(71, 109, 85) !important;
+}
+
+

@@ -1,0 +1,103 @@
+<div class="container p-0">
+  <!-- <div class="main-section">
+
+  </div> -->
+
+
+
+</div>
+
+
+<div class="details-section">
+
+</div>
+
+<div class="venue-section">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 venue-col-1">
+      <div class="row">
+        <div class="col-xs-12 venue-main-heading">
+          Besprekings Informasie
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 venue-main-body">
+          RSVP hieronder voor 8 Desember of by Anita (072 860 0332) <br />
+          Kan nog iets hier sit. se manet wat. Dalk iets oor venue.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <form action="https://www.google.com/maps/place/Goedgeleven/@-33.7789334,18.7085154,15z/data=!4m2!3m1!1s0x0:0x37040e88196589f0?sa=X&ved=2ahUKEwizlLD1u-3zAhXH2qQKHexPAZkQ_BJ6BAhIEAU" target="_blank">
+            <input class="directions-button" style="cursor: pointer;" type="submit" value="Aanwysings na Goedgeleven" />
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 venue-col-2">
+
+    </div>
+  </div>
+</div>
+
+<div class="rsvp-section">
+  <div class="row">
+    <div class="col-xs-12 rsvp-main-heading">
+      RSVP
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12 rsvp-body">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input placeholder="Naam en van">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <input placeholder="Epos address">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <input placeholder="kontak nommer">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 sien-ons-jou-daar">
+          Sien ons jou daar?
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 rsvp-button" >
+          <button [ngClass]="comming" (click)="rsvp(true)">JA</button>
+        </div>
+        <div class="col-xs-6 rsvp-button">
+          <button [ngClass]="notComming" (click)="rsvp(false)">NEE</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <textarea placeholder="Boodskap"></textarea>
+        </div>
+      </div>
+
+      <div class="row" [hidden]="!isRsvp">
+        <div class="col-xs-12">
+          <input placeholder="Liedjie versoek">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 rsvp-send-button">
+          <button>Stuur RSVP</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
