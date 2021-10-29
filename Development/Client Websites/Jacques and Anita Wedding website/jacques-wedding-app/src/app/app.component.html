@@ -52,19 +52,34 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <input placeholder="Naam en van">
+          <input placeholder="Naam en van" [(ngModel)]="name">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <input placeholder="Epos address">
+          <input placeholder="Epos address" [(ngModel)]="email">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <input placeholder="kontak nommer">
+          <input placeholder="kontak nommer" [(ngModel)]="telNo">
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12 sien-ons-jou-daar">
+         Vegetarian?
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 rsvp-button" >
+          <button [ngClass]="vegetarian" (click)="isPersonVegetarian(true)">JA</button>
+        </div>
+        <div class="col-xs-6 rsvp-button">
+          <button [ngClass]="notVegetarian" (click)="isPersonVegetarian(false)">NEE</button>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-xs-12 sien-ons-jou-daar">
           Sien ons jou daar?
@@ -82,18 +97,18 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <textarea placeholder="Boodskap"></textarea>
+          <textarea placeholder="Boodskap" [(ngModel)]="message"></textarea>
         </div>
       </div>
 
       <div class="row" [hidden]="!isRsvp">
         <div class="col-xs-12">
-          <input placeholder="Liedjie versoek">
+          <input placeholder="Liedjie versoek" [(ngModel)]="songRequest">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-6 rsvp-send-button">
-          <button>Stuur RSVP</button>
+          <button (click)="sendWeddingRSVP()">Stuur RSVP</button>
         </div>
       </div>
 

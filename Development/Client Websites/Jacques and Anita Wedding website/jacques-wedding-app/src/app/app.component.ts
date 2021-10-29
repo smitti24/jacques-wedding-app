@@ -1,3 +1,5 @@
+import { SendEmailModel } from './models/send-email-model';
+import { EmailService } from './email.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,6 +13,20 @@ export class AppComponent {
   comming = '';
   notComming = '';
 
+  isVegetarian = false;
+  vegetarian = '';
+  notVegetarian = '';
+
+  name: string = '';
+  email: string = '';
+  telNo: string = '';
+  songRequest: string = '';
+  message: string = '';
+
+
+
+  constructor(private emailService: EmailService){}
+
   rsvp(rsvp: boolean): void {
     console.log(rsvp);
 
@@ -23,5 +39,34 @@ export class AppComponent {
     }
 
     this.isRsvp = rsvp;
+  }
+
+  isPersonVegetarian(vegan: boolean): void {
+    console.log(vegan);
+
+    if (vegan) {
+      this.vegetarian = 'button-active';
+      this.notVegetarian = ''
+    } else {
+      this.vegetarian = '';
+      this.notVegetarian = 'button-active'
+    }
+
+    this.isVegetarian = vegan;
+  }
+
+  sendWeddingRSVP(){
+    const email: SendEmailModel = {
+      Subject: this.isRsvp ? `${this.name} are COMMING` : `${this.name} are NOT COMMING`,
+      FromAddress: this.email,
+      Message: this.message,
+      TelNo: this.telNo,
+      Name: this.name,
+      IsVegetarian: this.isVegetarian,
+      SongRequest: this.songRequest
+    }
+
+    this.emailService.sendEmail(email).subscribe();
+
   }
 }
