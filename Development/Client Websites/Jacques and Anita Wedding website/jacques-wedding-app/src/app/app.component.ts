@@ -88,5 +88,9 @@ export class AppComponent {
 
     this.disableRSVPButton = true;
   }
+
+  openMaps(): void {
+    window.open("https://www.google.com/maps/place/Goedgeleven/@-33.7789334,18.7085154,15z/data=!4m2!3m1!1s0x0:0x37040e88196589f0?sa=X&ved=2ahUKEwizlLD1u-3zAhXH2qQKHexPAZkQ_BJ6BAhIEAU", "_blank")
+  }
 }
 
