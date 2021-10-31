@@ -13,9 +13,7 @@ export class AppComponent {
   comming = '';
   notComming = '';
 
-  isVegetarian = false;
   vegetarian = '';
-  notVegetarian = '';
 
   name: string = '';
   email: string = '';
@@ -28,8 +26,6 @@ export class AppComponent {
   constructor(private emailService: EmailService){}
 
   rsvp(rsvp: boolean): void {
-    console.log(rsvp);
-
     if (rsvp) {
       this.comming = 'button-active';
       this.notComming = ''
@@ -41,20 +37,6 @@ export class AppComponent {
     this.isRsvp = rsvp;
   }
 
-  isPersonVegetarian(vegan: boolean): void {
-    console.log(vegan);
-
-    if (vegan) {
-      this.vegetarian = 'button-active';
-      this.notVegetarian = ''
-    } else {
-      this.vegetarian = '';
-      this.notVegetarian = 'button-active'
-    }
-
-    this.isVegetarian = vegan;
-  }
-
   sendWeddingRSVP() {
     const email: SendEmailModel = {
       Subject: this.isRsvp ? `${this.name} are COMMING` : `${this.name} are NOT COMMING`,
@@ -62,7 +44,7 @@ export class AppComponent {
       Message: this.message,
       TelNo: this.telNo,
       Name: this.name,
-      IsVegetarian: this.isVegetarian,
+      IsVegetarian: this.vegetarian,
       SongRequest: this.songRequest
     }
 
@@ -76,9 +58,7 @@ export class AppComponent {
     this.comming = '';
     this.notComming = '';
 
-    this.isVegetarian = false;
     this.vegetarian = '';
-    this.notVegetarian = '';
 
     this.name = '';
     this.email = '';

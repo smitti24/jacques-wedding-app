@@ -4,9 +4,9 @@ export class SendEmailModel {
     public Subject: string;
     public Message: string;
     public TelNo?: string;
-    public IsVegetarian: boolean;
+    public IsVegetarian: string;
     public SongRequest: string
 
-    constructor() { this.Name = '', this.FromAddress = '', this.Subject = '', this.Message = '', this.TelNo = '', this.IsVegetarian = false, this.SongRequest = '' };
+    constructor() { this.Name = '', this.FromAddress = '', this.Subject = '', this.Message = '', this.TelNo = '', this.IsVegetarian = '', this.SongRequest = '' };
 
 }
