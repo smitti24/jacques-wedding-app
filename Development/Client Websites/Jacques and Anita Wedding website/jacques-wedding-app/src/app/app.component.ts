@@ -22,7 +22,7 @@ export class AppComponent {
   telNo: string = '';
   songRequest: string = '';
   message: string = '';
-
+  disableRSVPButton = false;
 
 
   constructor(private emailService: EmailService){}
@@ -55,7 +55,7 @@ export class AppComponent {
     this.isVegetarian = vegan;
   }
 
-  sendWeddingRSVP(){
+  sendWeddingRSVP() {
     const email: SendEmailModel = {
       Subject: this.isRsvp ? `${this.name} are COMMING` : `${this.name} are NOT COMMING`,
       FromAddress: this.email,
@@ -66,7 +66,30 @@ export class AppComponent {
       SongRequest: this.songRequest
     }
 
-    this.emailService.sendEmail(email).subscribe();
+    this.emailService.sendEmail(email).pipe(
+      tap(response => this.clearTextBoxes())
+    ).subscribe();
+  }
 
+  clearTextBoxes(): void {
+    this.isRsvp = false;
+    this.comming = '';
+    this.notComming = '';
+
+    this.isVegetarian = false;
+    this.vegetarian = '';
+    this.notVegetarian = '';
+
+    this.name = '';
+    this.email = '';
+    this.telNo = '';
+    this.songRequest = '';
+    this.message = '';
+
+    this.disableRSVPButton = true;
   }
 }
+function tap(arg0: (response: any) => void): import("rxjs").OperatorFunction<Response, unknown> {
+  throw new Error('Function not implemented.');
+}
+

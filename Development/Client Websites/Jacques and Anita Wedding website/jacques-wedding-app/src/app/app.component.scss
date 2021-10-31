@@ -62,12 +62,13 @@
       padding: 10px;
       font-weight: bold;
       border: 2px solid rgb(71, 109, 85);
+      color: black;
     }
   }
 
   .venue-col-2 {
     height: 300px;
-    background: url('../assets/images/Goedgeleven-2.jpg') no-repeat center center;
+    background: url('../assets/images/Goedgeleven-1.jpg') no-repeat center center;
     background-size: 100%;
     background-color: rgb(71, 109, 85);
   }
@@ -126,7 +127,7 @@
         border-radius: 15px;
         background: white;
         font-weight: bolder;
-
+        color: black;
 
         &:active {
           color: white;
