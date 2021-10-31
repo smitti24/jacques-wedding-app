@@ -6,7 +6,7 @@
 .details-section {
   background-color: floralwhite;
 
-  background: url('../assets/images/Main page block 2.png') no-repeat center center;
+  background: url('../assets/images/Main page block.png') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,7 +33,7 @@
 
 .venue-section {
   .venue-col-1 {
-    height: 300px;
+    height: 250px;
     background-color: rgb(71, 109, 85);
 
     .row {
@@ -91,7 +91,7 @@
   }
 
   .rsvp-body {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -166,6 +166,18 @@
 .button-active{
   color: white;
   background: rgb(71, 109, 85) !important;
+}
+
+.general-text {
+  color: rgb(71, 109, 85);
+  font-weight: bold;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.bottom-text {
+  font-size: 25px;
 }
 
 
