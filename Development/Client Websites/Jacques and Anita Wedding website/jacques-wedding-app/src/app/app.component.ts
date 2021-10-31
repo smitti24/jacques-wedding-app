@@ -66,9 +66,9 @@ export class AppComponent {
       SongRequest: this.songRequest
     }
 
-    this.emailService.sendEmail(email).pipe(
-      tap(response => this.clearTextBoxes())
-    ).subscribe();
+    this.emailService.sendEmail(email).subscribe();
+
+    this.clearTextBoxes();
   }
 
   clearTextBoxes(): void {
@@ -88,8 +88,5 @@ export class AppComponent {
 
     this.disableRSVPButton = true;
   }
-}
-function tap(arg0: (response: any) => void): import("rxjs").OperatorFunction<Response, unknown> {
-  throw new Error('Function not implemented.');
 }
 

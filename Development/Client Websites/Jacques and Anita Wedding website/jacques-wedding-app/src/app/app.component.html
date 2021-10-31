@@ -52,17 +52,17 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <input placeholder="Naam en van" [(ngModel)]="name">
+          <input placeholder="Naam en van *" [(ngModel)]="name">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <input placeholder="Epos address" [(ngModel)]="email">
+          <input placeholder="Epos address *" [(ngModel)]="email">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <input placeholder="kontak nommer" [(ngModel)]="telNo">
+          <input placeholder="kontak nommer *" [(ngModel)]="telNo">
         </div>
       </div>
       <div class="row">
@@ -112,6 +112,11 @@
         </div>
       </div>
 
+      <div class="row" *ngIf="disableRSVPButton">
+        <div class="col-xs-6">
+          Dankie vir die terugvoer!.
+        </div>
+      </div>
     </div>
   </div>
 </div>
