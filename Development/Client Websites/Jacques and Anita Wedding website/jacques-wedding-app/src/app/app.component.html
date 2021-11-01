@@ -14,7 +14,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12 venue-main-body">
-          RSVP hieronder of by Anita (076 860 0332) voor 8 Desember <br />
+          RSVP hieronder of by Anita (076 860 0332) voor 2 Desember <br />
         </div>
       </div>
       <div class="row">
@@ -87,14 +87,14 @@
           <input placeholder="Liedjie versoek" [(ngModel)]="songRequest">
         </div>
       </div>
-      <div class="row" >
+      <div class="row" *ngIf="!disableRSVPButton">
         <div class="col-xs-6 rsvp-send-button">
           <button (click)="sendWeddingRSVP()">Stuur RSVP</button>
         </div>
       </div>
 
       <div class="row" *ngIf="disableRSVPButton">
-        <div class="col-xs-6">
+        <div class="col-xs-6 general-text">
           Dankie vir die terugvoer!
         </div>
       </div>

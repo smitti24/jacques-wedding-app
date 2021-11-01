@@ -69,7 +69,7 @@
   }
 
   .venue-col-2 {
-    height: 300px;
+    height: 250px;
     background: url('../assets/images/Goedgeleven-2.jpg') no-repeat center center;
     background-size: 100%;
     background-color: rgb(71, 109, 85);
@@ -80,9 +80,15 @@
   margin-top: 60px;
   height: 100vh;
 
-  .row {
-    justify-content: inherit;
+  @media screen and (max-device-width: 1024px){
+    .row {
+      justify-content: inherit;
+    }
   }
+  .row {
+    justify-content: space-around;
+  }
+
   .rsvp-main-heading {
     font-family: 'Sacramento', cursive;
     font-size: 50px;
