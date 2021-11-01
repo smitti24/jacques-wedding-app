@@ -127,7 +127,13 @@
 
     }
 
+    .rsvp-button-row {
+      justify-content: center;
+    }
+
     .rsvp-button {
+      margin: 10px;
+
       button {
         cursor: pointer;
         width: 100px;
