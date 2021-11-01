@@ -37,31 +37,34 @@
   </div> -->
   <div class="row">
 
-    <div class="col-xs-12 rsvp-body">
+    <div class="col-xs-12 rsvp-body" >
 
-      <div class="row">
+      <ng-content *ngIf="!disableRSVPButton">
+
+      </ng-content>
+      <div class="row" *ngIf="!disableRSVPButton">
         <div class="col-xs-12">
           <input placeholder="Naam en van *" [(ngModel)]="name">
         </div>
       </div>
-      <div class="row">
+      <div class="row" *ngIf="!disableRSVPButton">
         <div class="col-xs-12">
           <input placeholder="Epos address *" [(ngModel)]="email">
         </div>
       </div>
-      <div class="row">
+      <div class="row" *ngIf="!disableRSVPButton">
         <div class="col-xs-12">
           <input placeholder="kontak nommer *" [(ngModel)]="telNo">
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" *ngIf="!disableRSVPButton">
         <div class="col-xs-12 sien-ons-jou-daar">
           Sien ons jou daar?
         </div>
       </div>
 
-      <div class="row rsvp-button-row">
+      <div class="row rsvp-button-row" *ngIf="!disableRSVPButton">
         <div class="col-xs-6 rsvp-button" >
           <button [ngClass]="comming" (click)="rsvp(true)">JA</button>
         </div>
@@ -70,25 +73,25 @@
         </div>
       </div>
 
-      <div class="row" *ngIf="comming">
+      <div class="row" *ngIf="comming && !disableRSVPButton">
         <div class="col-xs-12">
           <input placeholder="Dieetvoorkeur bv. vegetaries" [(ngModel)]="vegetarian">
         </div>
       </div>
 
-      <div class="row" *ngIf="notComming">
+      <div class="row" *ngIf="notComming && !disableRSVPButton">
         <div class="col-xs-12">
           <textarea placeholder="Boodskap" [(ngModel)]="message"></textarea>
         </div>
       </div>
 
-      <div class="row" [hidden]="!isRsvp">
+      <div class="row" [hidden]="!isRsvp" *ngIf="!disableRSVPButton">
         <div class="col-xs-12">
           <input placeholder="Liedjie versoek" [(ngModel)]="songRequest">
         </div>
       </div>
-      <div class="row" *ngIf="!disableRSVPButton">
-        <div class="col-xs-6 rsvp-send-button">
+      <div class="row">
+        <div class="col-xs-6 rsvp-send-button" *ngIf="!disableRSVPButton">
           <button (click)="sendWeddingRSVP()">Stuur RSVP</button>
         </div>
       </div>
