@@ -1,0 +1,29 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixin';
+@import 'assets/scss/global';
+@import 'assets/scss/header-left';
+@import 'assets/scss/menu';
+@import 'assets/scss/home';
+@import 'assets/scss/about';
+@import 'assets/scss/services';
+@import 'assets/scss/works';
+@import 'assets/scss/testimonials';
+@import 'assets/scss/blog';
+@import 'assets/scss/contact';
+@import 'assets/scss/preloader';
+@import 'assets/scss/responsive';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a6988e;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #a6988e;  /* creates padding around scroll thumb */
+}
